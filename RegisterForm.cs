@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ABC_Car_Traders
 {
-    public partial class Form1 : Form
+    public partial class RegisterForm : Form
     {
-        public Form1()
+        public RegisterForm()
         {
             InitializeComponent();
-        }
-
-        private void signup_loginBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

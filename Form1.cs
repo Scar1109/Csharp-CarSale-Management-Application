@@ -19,7 +19,9 @@ namespace ABC_Car_Traders
 
         private void signup_loginBtn_Click(object sender, EventArgs e)
         {
-
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.Show();
+            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)

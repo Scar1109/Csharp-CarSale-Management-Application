@@ -58,11 +58,29 @@
     <Compile Include="AdminPanels\CarManagement.Designer.cs">
       <DependentUpon>CarManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurrentUser.cs" />
-    <Compile Include="Dashboard.cs">
+    <Compile Include="AdminPanels\OrderManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="AdminPanels\OrderManagement.Designer.cs">
+      <DependentUpon>OrderManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanels\PartManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPanels\PartManagement.Designer.cs">
+      <DependentUpon>PartManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanels\UserManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPanels\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentUser.cs" />
+    <Compile Include="AdminPanels\Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminPanels\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -86,8 +104,17 @@
     <EmbeddedResource Include="AdminPanels\CarManagement.resx">
       <DependentUpon>CarManagement.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="AdminPanels\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanels\OrderManagement.resx">
+      <DependentUpon>OrderManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanels\PartManagement.resx">
+      <DependentUpon>PartManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanels\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

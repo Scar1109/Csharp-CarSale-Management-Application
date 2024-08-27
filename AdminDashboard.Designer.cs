@@ -36,13 +36,13 @@
             this.dashboard_btn = new System.Windows.Forms.Button();
             this.greet_user = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.logoutBtn = new System.Windows.Forms.Button();
+            this.orderDetails_btn = new System.Windows.Forms.Button();
+            this.partDetails_btn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.logout_btn = new System.Windows.Forms.Button();
-            this.partDetails_btn = new System.Windows.Forms.Button();
-            this.orderDetails_btn = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -161,6 +161,55 @@
             this.panel2.Size = new System.Drawing.Size(225, 503);
             this.panel2.TabIndex = 2;
             // 
+            // logoutBtn
+            // 
+            this.logoutBtn.BackgroundImage = global::ABC_Car_Traders.Properties.Resources.logout_icon_30x30;
+            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logoutBtn.FlatAppearance.BorderSize = 0;
+            this.logoutBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Location = new System.Drawing.Point(15, 456);
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Size = new System.Drawing.Size(30, 30);
+            this.logoutBtn.TabIndex = 7;
+            this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            // 
+            // orderDetails_btn
+            // 
+            this.orderDetails_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.orderDetails_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.orderDetails_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.orderDetails_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orderDetails_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderDetails_btn.ForeColor = System.Drawing.Color.White;
+            this.orderDetails_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.orderDetails_btn.Location = new System.Drawing.Point(14, 310);
+            this.orderDetails_btn.Name = "orderDetails_btn";
+            this.orderDetails_btn.Size = new System.Drawing.Size(200, 40);
+            this.orderDetails_btn.TabIndex = 8;
+            this.orderDetails_btn.Text = "ORDERS";
+            this.orderDetails_btn.UseVisualStyleBackColor = false;
+            // 
+            // partDetails_btn
+            // 
+            this.partDetails_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.partDetails_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.partDetails_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.partDetails_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.partDetails_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.partDetails_btn.ForeColor = System.Drawing.Color.White;
+            this.partDetails_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.partDetails_btn.Location = new System.Drawing.Point(14, 262);
+            this.partDetails_btn.Name = "partDetails_btn";
+            this.partDetails_btn.Size = new System.Drawing.Size(200, 40);
+            this.partDetails_btn.TabIndex = 7;
+            this.partDetails_btn.Text = "PARTS";
+            this.partDetails_btn.UseVisualStyleBackColor = false;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -187,63 +236,6 @@
             this.logout_btn.TabIndex = 5;
             this.logout_btn.UseVisualStyleBackColor = true;
             // 
-            // partDetails_btn
-            // 
-            this.partDetails_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.partDetails_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.partDetails_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.partDetails_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.partDetails_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.partDetails_btn.ForeColor = System.Drawing.Color.White;
-            this.partDetails_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.partDetails_btn.Location = new System.Drawing.Point(14, 262);
-            this.partDetails_btn.Name = "partDetails_btn";
-            this.partDetails_btn.Size = new System.Drawing.Size(200, 40);
-            this.partDetails_btn.TabIndex = 7;
-            this.partDetails_btn.Text = "PARTS";
-            this.partDetails_btn.UseVisualStyleBackColor = false;
-            // 
-            // orderDetails_btn
-            // 
-            this.orderDetails_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.orderDetails_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.orderDetails_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.orderDetails_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderDetails_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orderDetails_btn.ForeColor = System.Drawing.Color.White;
-            this.orderDetails_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.orderDetails_btn.Location = new System.Drawing.Point(14, 310);
-            this.orderDetails_btn.Name = "orderDetails_btn";
-            this.orderDetails_btn.Size = new System.Drawing.Size(200, 40);
-            this.orderDetails_btn.TabIndex = 8;
-            this.orderDetails_btn.Text = "ORDERS";
-            this.orderDetails_btn.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(225, 35);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(790, 503);
-            this.panel3.TabIndex = 3;
-            // 
-            // logoutBtn
-            // 
-            this.logoutBtn.BackgroundImage = global::ABC_Car_Traders.Properties.Resources.logout_icon_30x30;
-            this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.logoutBtn.FlatAppearance.BorderSize = 0;
-            this.logoutBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(15, 456);
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(30, 30);
-            this.logoutBtn.TabIndex = 7;
-            this.logoutBtn.UseVisualStyleBackColor = true;
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ABC_Car_Traders.Properties.Resources.logo_white;
@@ -253,6 +245,14 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(225, 35);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(790, 503);
+            this.panel3.TabIndex = 3;
             // 
             // AdminDashboard
             // 

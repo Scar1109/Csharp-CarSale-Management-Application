@@ -102,7 +102,10 @@ namespace ABC_Car_Traders.HomePanels
                 {
                     Text = "Order Now",
                     Location = new Point(10, 260),
-                    Size = new Size(180, 30)
+                    Size = new Size(180, 30),
+                    BackColor = Color.FromArgb(18, 63, 142), 
+                    ForeColor = Color.White, 
+                    FlatStyle = FlatStyle.Flat 
                 };
                 orderNowButton.Click += (s, e) => OrderCar(car);
                 cardPanel.Controls.Add(orderNowButton);

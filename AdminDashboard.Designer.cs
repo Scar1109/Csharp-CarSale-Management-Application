@@ -89,6 +89,7 @@
             this.users_btn.TabIndex = 4;
             this.users_btn.Text = "USERS";
             this.users_btn.UseVisualStyleBackColor = false;
+            this.users_btn.Click += new System.EventHandler(this.users_btn_Click);
             // 
             // manageCar_btn
             // 
@@ -105,6 +106,7 @@
             this.manageCar_btn.TabIndex = 3;
             this.manageCar_btn.Text = "CARS";
             this.manageCar_btn.UseVisualStyleBackColor = false;
+            this.manageCar_btn.Click += new System.EventHandler(this.manageCar_btn_Click);
             // 
             // dashboard_btn
             // 
@@ -121,6 +123,7 @@
             this.dashboard_btn.TabIndex = 2;
             this.dashboard_btn.Text = "DASHBOARD";
             this.dashboard_btn.UseVisualStyleBackColor = false;
+            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
             // 
             // greet_user
             // 
@@ -183,6 +186,7 @@
             this.orderDetails_btn.TabIndex = 8;
             this.orderDetails_btn.Text = "ORDERS";
             this.orderDetails_btn.UseVisualStyleBackColor = false;
+            this.orderDetails_btn.Click += new System.EventHandler(this.orderDetails_btn_Click);
             // 
             // partDetails_btn
             // 
@@ -199,6 +203,7 @@
             this.partDetails_btn.TabIndex = 7;
             this.partDetails_btn.Text = "PARTS";
             this.partDetails_btn.UseVisualStyleBackColor = false;
+            this.partDetails_btn.Click += new System.EventHandler(this.partDetails_btn_Click);
             // 
             // logout_btn
             // 

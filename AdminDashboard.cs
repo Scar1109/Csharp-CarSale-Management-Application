@@ -46,5 +46,50 @@ namespace ABC_Car_Traders
             // Close the entire application if the RegisterForm is closed
             Application.Exit();
         }
+
+        private void dashboard_btn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = true;
+            carManagement1.Visible = false;
+            partManagement1.Visible = false;
+            orderManagement1.Visible = false;
+            userManagement1.Visible = false;
+        }
+
+        private void manageCar_btn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            carManagement1.Visible = true;
+            partManagement1.Visible = false;
+            orderManagement1.Visible = false;
+            userManagement1.Visible = false;
+        }
+
+        private void partDetails_btn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            carManagement1.Visible = false;
+            partManagement1.Visible = true;
+            orderManagement1.Visible = false;
+            userManagement1.Visible = false;
+        }
+
+        private void orderDetails_btn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            carManagement1.Visible = false;
+            partManagement1.Visible = false;
+            orderManagement1.Visible = true;
+            userManagement1.Visible = false;
+        }
+
+        private void users_btn_Click(object sender, EventArgs e)
+        {
+            dashboard1.Visible = false;
+            carManagement1.Visible = false;
+            partManagement1.Visible = false;
+            orderManagement1.Visible = false;
+            userManagement1.Visible = true;
+        }
     }
 }

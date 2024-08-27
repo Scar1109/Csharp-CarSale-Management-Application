@@ -60,8 +60,8 @@ namespace ABC_Car_Traders
                     {
                         sqlConnection.OpenConnection();
 
-                        string query = "INSERT INTO CarOrders (CustomerID, CarID, Quantity, TotalPrice, Status, AdditionalInfo) " +
-                                       "VALUES (@CustomerID, @CarID, @Quantity, @TotalPrice, @Status, @AdditionalInfo)";
+                        string query = "INSERT INTO CarOrders (CustomerID, CarID, Quantity, TotalPrice, Status) " +
+                                       "VALUES (@CustomerID, @CarID, @Quantity, @TotalPrice, @Status)";
 
                         using (SqlCommand cmd = new SqlCommand(query, sqlConnection.GetConnection()))
                         {
@@ -75,7 +75,6 @@ namespace ABC_Car_Traders
                             cmd.Parameters.AddWithValue("@Quantity", quantity);
                             cmd.Parameters.AddWithValue("@TotalPrice", totalPrice);
                             cmd.Parameters.AddWithValue("@Status", "Pending"); // Default status
-                            cmd.Parameters.AddWithValue("@AdditionalInfo", DBNull.Value); // You can add more info if needed
 
                             cmd.ExecuteNonQuery();
 

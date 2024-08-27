@@ -35,7 +35,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Name = "PartManagement";
-            this.Size = new System.Drawing.Size(790, 503);
+            this.Size = new System.Drawing.Size(907, 560);
             this.ResumeLayout(false);
 
         }

@@ -46,7 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label1);
             this.Name = "Dashboard";
-            this.Size = new System.Drawing.Size(790, 503);
+            this.Size = new System.Drawing.Size(907, 560);
             this.ResumeLayout(false);
             this.PerformLayout();
 

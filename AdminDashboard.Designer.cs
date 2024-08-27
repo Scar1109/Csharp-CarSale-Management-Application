@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.exit = new System.Windows.Forms.Label();
             this.users_btn = new System.Windows.Forms.Button();
             this.manageCar_btn = new System.Windows.Forms.Button();
             this.dashboard_btn = new System.Windows.Forms.Button();
@@ -39,7 +38,6 @@
             this.logoutBtn = new System.Windows.Forms.Button();
             this.orderDetails_btn = new System.Windows.Forms.Button();
             this.partDetails_btn = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.logout_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,11 +51,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.exit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1015, 35);
+            this.panel1.Size = new System.Drawing.Size(1132, 35);
             this.panel1.TabIndex = 1;
             // 
             // label2
@@ -70,18 +67,6 @@
             this.label2.Size = new System.Drawing.Size(103, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "ABC Car Traders";
-            // 
-            // exit
-            // 
-            this.exit.AutoSize = true;
-            this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exit.ForeColor = System.Drawing.Color.White;
-            this.exit.Location = new System.Drawing.Point(1079, 8);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(15, 16);
-            this.exit.TabIndex = 0;
-            this.exit.Text = "X";
             // 
             // users_btn
             // 
@@ -148,7 +133,6 @@
             this.panel2.Controls.Add(this.logoutBtn);
             this.panel2.Controls.Add(this.orderDetails_btn);
             this.panel2.Controls.Add(this.partDetails_btn);
-            this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.logout_btn);
             this.panel2.Controls.Add(this.users_btn);
             this.panel2.Controls.Add(this.manageCar_btn);
@@ -158,7 +142,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(225, 503);
+            this.panel2.Size = new System.Drawing.Size(225, 560);
             this.panel2.TabIndex = 2;
             // 
             // logoutBtn
@@ -171,7 +155,7 @@
             this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Location = new System.Drawing.Point(15, 456);
+            this.logoutBtn.Location = new System.Drawing.Point(15, 517);
             this.logoutBtn.Name = "logoutBtn";
             this.logoutBtn.Size = new System.Drawing.Size(30, 30);
             this.logoutBtn.TabIndex = 7;
@@ -210,17 +194,6 @@
             this.partDetails_btn.Text = "PARTS";
             this.partDetails_btn.UseVisualStyleBackColor = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(56, 524);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 18);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Sign Out";
-            // 
             // logout_btn
             // 
             this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -251,14 +224,14 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(225, 35);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(790, 503);
+            this.panel3.Size = new System.Drawing.Size(907, 560);
             this.panel3.TabIndex = 3;
             // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 538);
+            this.ClientSize = new System.Drawing.Size(1132, 595);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -278,14 +251,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label exit;
         private System.Windows.Forms.Button users_btn;
         private System.Windows.Forms.Button manageCar_btn;
         private System.Windows.Forms.Button dashboard_btn;
         private System.Windows.Forms.Label greet_user;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Button partDetails_btn;
         private System.Windows.Forms.Button logoutBtn;

@@ -147,7 +147,7 @@
             this.panel3.Controls.Add(this.ordersView1);
             this.panel3.Location = new System.Drawing.Point(11, 169);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(952, 669);
+            this.panel3.Size = new System.Drawing.Size(952, 610);
             this.panel3.TabIndex = 4;
             // 
             // carView1
@@ -156,28 +156,28 @@
             this.carView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.carView1.Location = new System.Drawing.Point(0, 0);
             this.carView1.Name = "carView1";
-            this.carView1.Size = new System.Drawing.Size(952, 666);
+            this.carView1.Size = new System.Drawing.Size(952, 608);
             this.carView1.TabIndex = 2;
             // 
             // partsView1
             // 
             this.partsView1.Location = new System.Drawing.Point(0, 0);
             this.partsView1.Name = "partsView1";
-            this.partsView1.Size = new System.Drawing.Size(952, 669);
+            this.partsView1.Size = new System.Drawing.Size(952, 608);
             this.partsView1.TabIndex = 1;
             // 
             // ordersView1
             // 
             this.ordersView1.Location = new System.Drawing.Point(1, 0);
             this.ordersView1.Name = "ordersView1";
-            this.ordersView1.Size = new System.Drawing.Size(952, 669);
+            this.ordersView1.Size = new System.Drawing.Size(952, 608);
             this.ordersView1.TabIndex = 0;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 850);
+            this.ClientSize = new System.Drawing.Size(975, 794);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.profile_text);
             this.Controls.Add(this.panel2);

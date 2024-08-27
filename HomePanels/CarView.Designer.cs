@@ -55,7 +55,7 @@
             this.carViewPanel.AutoScroll = true;
             this.carViewPanel.Location = new System.Drawing.Point(3, 36);
             this.carViewPanel.Name = "carViewPanel";
-            this.carViewPanel.Size = new System.Drawing.Size(949, 630);
+            this.carViewPanel.Size = new System.Drawing.Size(949, 569);
             this.carViewPanel.TabIndex = 8;
             // 
             // CarView
@@ -68,7 +68,7 @@
             this.Controls.Add(this.searchInput);
             this.Controls.Add(this.searchBtn);
             this.Name = "CarView";
-            this.Size = new System.Drawing.Size(950, 667);
+            this.Size = new System.Drawing.Size(952, 608);
             this.ResumeLayout(false);
             this.PerformLayout();
 

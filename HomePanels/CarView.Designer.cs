@@ -62,11 +62,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.carViewPanel);
             this.Controls.Add(this.searchInput);
             this.Controls.Add(this.searchBtn);
             this.Name = "CarView";
-            this.Size = new System.Drawing.Size(952, 669);
+            this.Size = new System.Drawing.Size(950, 667);
             this.ResumeLayout(false);
             this.PerformLayout();
 

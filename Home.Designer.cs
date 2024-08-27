@@ -31,9 +31,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dashboard_btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dashboard_btn = new System.Windows.Forms.Button();
             this.profile_text = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.carView1 = new ABC_Car_Traders.HomePanels.CarView();
@@ -79,22 +79,22 @@
             this.panel2.Size = new System.Drawing.Size(952, 67);
             this.panel2.TabIndex = 2;
             // 
-            // dashboard_btn
+            // button2
             // 
-            this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dashboard_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboard_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
-            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboard_btn.Location = new System.Drawing.Point(15, 12);
-            this.dashboard_btn.Name = "dashboard_btn";
-            this.dashboard_btn.Size = new System.Drawing.Size(233, 40);
-            this.dashboard_btn.TabIndex = 3;
-            this.dashboard_btn.Text = "CARS";
-            this.dashboard_btn.UseVisualStyleBackColor = false;
-            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(702, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(233, 40);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "ORDERS";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -113,22 +113,22 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // dashboard_btn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(702, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(233, 40);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "ORDERS";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.dashboard_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dashboard_btn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_btn.ForeColor = System.Drawing.Color.White;
+            this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dashboard_btn.Location = new System.Drawing.Point(15, 12);
+            this.dashboard_btn.Name = "dashboard_btn";
+            this.dashboard_btn.Size = new System.Drawing.Size(233, 40);
+            this.dashboard_btn.TabIndex = 3;
+            this.dashboard_btn.Text = "CARS";
+            this.dashboard_btn.UseVisualStyleBackColor = false;
+            this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
             // 
             // profile_text
             // 
@@ -152,9 +152,11 @@
             // 
             // carView1
             // 
-            this.carView1.Location = new System.Drawing.Point(0, -3);
+            this.carView1.BackColor = System.Drawing.Color.White;
+            this.carView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.carView1.Location = new System.Drawing.Point(0, 0);
             this.carView1.Name = "carView1";
-            this.carView1.Size = new System.Drawing.Size(952, 669);
+            this.carView1.Size = new System.Drawing.Size(952, 666);
             this.carView1.TabIndex = 2;
             // 
             // partsView1

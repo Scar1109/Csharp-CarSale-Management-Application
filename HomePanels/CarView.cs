@@ -91,7 +91,7 @@ namespace ABC_Car_Traders.HomePanels
 
                 Label priceLabel = new Label
                 {
-                    Text = "Price: $" + car.Price.ToString("N2"),
+                    Text = "Price: LKR " + car.Price.ToString("N2"),
                     Location = new Point(10, 240),
                     AutoSize = true
                 };

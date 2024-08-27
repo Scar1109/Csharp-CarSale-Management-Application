@@ -88,7 +88,7 @@
             this.button2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(702, 12);
+            this.button2.Location = new System.Drawing.Point(663, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(233, 40);
             this.button2.TabIndex = 5;
@@ -105,7 +105,7 @@
             this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(364, 12);
+            this.button1.Location = new System.Drawing.Point(361, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(233, 40);
             this.button1.TabIndex = 4;
@@ -122,7 +122,7 @@
             this.dashboard_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboard_btn.ForeColor = System.Drawing.Color.White;
             this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dashboard_btn.Location = new System.Drawing.Point(15, 12);
+            this.dashboard_btn.Location = new System.Drawing.Point(63, 12);
             this.dashboard_btn.Name = "dashboard_btn";
             this.dashboard_btn.Size = new System.Drawing.Size(233, 40);
             this.dashboard_btn.TabIndex = 3;

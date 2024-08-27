@@ -91,5 +91,57 @@ namespace ABC_Car_Traders.Data
                 Console.WriteLine("Error updating order status: " + ex.Message);
             }
         }
+
+        public List<CarOrderData> GetCarOrdersByCustomer(int customerId)
+        {
+            List<CarOrderData> carOrderList = new List<CarOrderData>();
+
+            try
+            {
+                using (var sqlConnection = new SQLConnection())
+                {
+                    sqlConnection.OpenConnection();
+
+                    string query = @"SELECT co.OrderID, co.CustomerID, co.CarID, c.Make, c.Model, c.image_url, 
+                             co.OrderDate, co.Quantity, co.TotalPrice, co.Status
+                             FROM CarOrders co
+                             INNER JOIN Cars c ON co.CarID = c.id
+                             WHERE co.CustomerID = @CustomerID";
+
+                    using (SqlCommand cmd = new SqlCommand(query, sqlConnection.GetConnection()))
+                    {
+                        cmd.Parameters.AddWithValue("@CustomerID", customerId);
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        while (reader.Read())
+                        {
+                            CarOrderData carOrder = new CarOrderData
+                            {
+                                OrderID = (int)reader["OrderID"],
+                                CustomerID = (int)reader["CustomerID"],
+                                CarID = (int)reader["CarID"],
+                                Make = reader["Make"].ToString(),
+                                Model = reader["Model"].ToString(),
+                                ImageUrl = reader["image_url"].ToString(),
+                                OrderDate = (DateTime)reader["OrderDate"],
+                                Quantity = (int)reader["Quantity"],
+                                TotalPrice = (decimal)reader["TotalPrice"],
+                                Status = reader["Status"].ToString()
+                            };
+
+                            carOrderList.Add(carOrder);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error retrieving car orders: " + ex.Message);
+            }
+
+            return carOrderList;
+        }
+
     }
 }

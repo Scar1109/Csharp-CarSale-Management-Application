@@ -41,9 +41,15 @@
             this.logout_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.userManagement1 = new ABC_Car_Traders.AdminPanels.UserManagement();
+            this.orderManagement1 = new ABC_Car_Traders.AdminPanels.OrderManagement();
+            this.partManagement1 = new ABC_Car_Traders.AdminPanels.PartManagement();
+            this.carManagement1 = new ABC_Car_Traders.AdminPanels.CarManagement();
+            this.dashboard1 = new ABC_Car_Traders.Dashboard();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -221,11 +227,51 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.dashboard1);
+            this.panel3.Controls.Add(this.carManagement1);
+            this.panel3.Controls.Add(this.partManagement1);
+            this.panel3.Controls.Add(this.orderManagement1);
+            this.panel3.Controls.Add(this.userManagement1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(225, 35);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(907, 560);
             this.panel3.TabIndex = 3;
+            // 
+            // userManagement1
+            // 
+            this.userManagement1.Location = new System.Drawing.Point(0, 0);
+            this.userManagement1.Name = "userManagement1";
+            this.userManagement1.Size = new System.Drawing.Size(907, 560);
+            this.userManagement1.TabIndex = 0;
+            // 
+            // orderManagement1
+            // 
+            this.orderManagement1.Location = new System.Drawing.Point(0, 0);
+            this.orderManagement1.Name = "orderManagement1";
+            this.orderManagement1.Size = new System.Drawing.Size(907, 560);
+            this.orderManagement1.TabIndex = 1;
+            // 
+            // partManagement1
+            // 
+            this.partManagement1.Location = new System.Drawing.Point(0, 0);
+            this.partManagement1.Name = "partManagement1";
+            this.partManagement1.Size = new System.Drawing.Size(907, 560);
+            this.partManagement1.TabIndex = 2;
+            // 
+            // carManagement1
+            // 
+            this.carManagement1.Location = new System.Drawing.Point(-3, 0);
+            this.carManagement1.Name = "carManagement1";
+            this.carManagement1.Size = new System.Drawing.Size(907, 560);
+            this.carManagement1.TabIndex = 3;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(907, 560);
+            this.dashboard1.TabIndex = 4;
             // 
             // AdminDashboard
             // 
@@ -243,6 +289,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -262,5 +309,10 @@
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button orderDetails_btn;
         private System.Windows.Forms.Panel panel3;
+        private AdminPanels.OrderManagement orderManagement1;
+        private AdminPanels.UserManagement userManagement1;
+        private Dashboard dashboard1;
+        private AdminPanels.CarManagement carManagement1;
+        private AdminPanels.PartManagement partManagement1;
     }
 }

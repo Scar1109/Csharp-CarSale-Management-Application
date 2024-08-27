@@ -65,8 +65,8 @@ namespace ABC_Car_Traders
                 // Open the SQL connection
                 sql.OpenConnection();
 
-                // SQL query to check if the user exists
-                string query = "SELECT COUNT(*) FROM users WHERE username = @Username AND password = @Password";
+                // SQL query to check if the user exists and retrieve user details
+                string query = "SELECT id, username, email, userType, date_register FROM users WHERE username = @Username AND password = @Password";
 
                 using (SqlCommand cmd = new SqlCommand(query, sql.GetConnection()))
                 {
@@ -74,20 +74,38 @@ namespace ABC_Car_Traders
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@Password", password);
 
-                    // Execute the query and get the result
-                    int userCount = (int)cmd.ExecuteScalar();
+                    // Execute the query and read the result
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            // Store user details in the CurrentUser class
+                            CurrentUser.Id = reader.GetInt32(0);
+                            CurrentUser.Username = reader.GetString(1);
+                            CurrentUser.Email = reader.GetString(2);
+                            CurrentUser.UserType = reader.GetString(3);
+                            CurrentUser.DateRegister = reader.GetDateTime(4);
 
-                    if (userCount > 0)
-                    {
-                        MessageBox.Show("Login successful!");
-                        // Proceed to the next form (e.g., Admin or Customer dashboard)
-                        //DashboardForm dashboard = new DashboardForm();
-                        //dashboard.Show();
-                        //this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password.");
+                            MessageBox.Show("Login successful as " + CurrentUser.UserType);
+
+                            // Redirect based on user type
+                            if (CurrentUser.UserType == "Admin")
+                            {
+                                //AdminDashboard adminDashboard = new AdminDashboard();
+                                //adminDashboard.Show();
+                            }
+                            else if (CurrentUser.UserType == "Customer")
+                            {
+                                //Home home = new Home();
+                                //home.Show();
+                            }
+
+                            this.Hide(); // Hide the login form
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid username or password.");
+                        }
                     }
                 }
             }

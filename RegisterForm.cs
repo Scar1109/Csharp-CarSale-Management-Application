@@ -21,6 +21,8 @@ namespace ABC_Car_Traders
             string username = signup_username.Text.Trim();
             string email = signup_email.Text.Trim();
             string password = signup_password.Text.Trim();
+            string userType = "Customer"; // Default userType as Customer
+            DateTime dateRegister = DateTime.Now; // Current date as registration date
 
             // Validate inputs
             if (string.IsNullOrWhiteSpace(username))
@@ -41,9 +43,6 @@ namespace ABC_Car_Traders
                 return;
             }
 
-            string userType = "Customer"; // Default userType as Customer
-            DateTime dateRegister = DateTime.Now; // Current date as registration date
-
             try
             {
                 // Open the SQL connection
@@ -51,6 +50,7 @@ namespace ABC_Car_Traders
 
                 // SQL query to insert a new user
                 string query = "INSERT INTO users (username, password, email, userType, date_register) " +
+                               "OUTPUT INSERTED.id " + // Get the inserted user's ID
                                "VALUES (@Username, @Password, @Email, @UserType, @DateRegister)";
 
                 using (SqlCommand cmd = new SqlCommand(query, sql.GetConnection()))
@@ -62,14 +62,24 @@ namespace ABC_Car_Traders
                     cmd.Parameters.AddWithValue("@UserType", userType);
                     cmd.Parameters.AddWithValue("@DateRegister", dateRegister);
 
-                    // Execute the query
-                    int result = cmd.ExecuteNonQuery();
+                    // Execute the query and get the inserted user's ID
+                    int userId = (int)cmd.ExecuteScalar();
 
-                    // Check if the insertion was successful
-                    if (result > 0)
+                    if (userId > 0)
                     {
                         MessageBox.Show("User registered successfully!");
-                        ClearInputFields(); // Clear the fields after successful registration
+
+                        // Store user details in the CurrentUser class
+                        CurrentUser.Id = userId;
+                        CurrentUser.Username = username;
+                        CurrentUser.Email = email;
+                        CurrentUser.UserType = userType;
+                        CurrentUser.DateRegister = dateRegister;
+
+                        // Redirect based on user type (since it's a new user, default is Customer)
+                        //Home home = new Home();
+                        //home.Show();
+                        this.Hide();
                     }
                     else
                     {

@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 namespace ABC_Car_Traders
 {
-    class CarData
+    public class CarData
     {
         // Car properties
         public int Id { get; set; }

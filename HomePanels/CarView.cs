@@ -148,7 +148,9 @@ namespace ABC_Car_Traders.HomePanels
         private void OrderCar(CarData car)
         {
             // You can implement the actual ordering logic here
-            MessageBox.Show($"Order placed for {car.Make} {car.Model}!", "Order Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            OrderForm orderForm = new OrderForm(car);
+
+            orderForm.ShowDialog();
         }
     }
 }

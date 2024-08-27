@@ -23,6 +23,8 @@ namespace ABC_Car_Traders
             partsView1.Visible = false;
             carView1.Visible = true;
             ordersView1.Visible = false;
+
+            profile_text.Text = "Hi, " + CurrentUser.Username;
         }
 
         private void Custom_FormClosing(object sender, FormClosingEventArgs e)

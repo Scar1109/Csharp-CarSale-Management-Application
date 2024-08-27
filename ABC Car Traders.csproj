@@ -164,5 +164,8 @@
   <ItemGroup>
     <None Include="Resources\logout-icon-30x30.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

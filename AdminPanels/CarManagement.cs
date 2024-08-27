@@ -72,18 +72,10 @@ namespace ABC_Car_Traders.AdminPanels
                         else
                         {
                             DateTime today = DateTime.Today;
+                            string imagePath = SaveImage(addCar_picture, addCar_regNo.Text.Trim());
+
                             string insertData = "INSERT INTO Cars (make, model, year, price, mileage, transmission, engine_capacity, registration_number, date_added, image_url) " +
                                                 "VALUES (@Make, @Model, @Year, @Price, @Mileage, @Transmission, @EngineCapacity, @RegistrationNumber, @DateAdded, @ImageUrl)";
-
-                            string imagePath = Path.Combine(@"C:\Path\To\Your\ImageDirectory\" + addCar_regNo.Text.Trim() + ".jpg");
-                            string directoryPath = Path.GetDirectoryName(imagePath);
-
-                            if (!Directory.Exists(directoryPath))
-                            {
-                                Directory.CreateDirectory(directoryPath);
-                            }
-
-                            File.Copy(addCar_picture.ImageLocation, imagePath, true);
 
                             using (SqlCommand cmd = new SqlCommand(insertData, sql.GetConnection()))
                             {
@@ -120,6 +112,7 @@ namespace ABC_Car_Traders.AdminPanels
             }
         }
 
+
         private void addCar_updateBtn_Click(object sender, EventArgs e)
         {
             if (addCar_make.Text == ""
@@ -147,53 +140,40 @@ namespace ABC_Car_Traders.AdminPanels
                         string updateData = "UPDATE Cars SET make = @Make, model = @Model, year = @Year, price = @Price, mileage = @Mileage, transmission = @Transmission, " +
                                             "engine_capacity = @EngineCapacity";
 
-                        // Only update the image if the user selected a new one
-                        if (!string.IsNullOrEmpty(addCar_picture.ImageLocation))
+                        // Save the new image if it exists
+                        string imagePath = SaveImage(addCar_picture, addCar_regNo.Text.Trim());
+
+                        if (!string.IsNullOrEmpty(imagePath))
                         {
                             updateData += ", image_url = @ImageUrl";
-
-                            string imagePath = Path.Combine(@"C:\Path\To\Your\ImageDirectory\" + addCar_regNo.Text.Trim() + ".jpg");
-
-                            File.Copy(addCar_picture.ImageLocation, imagePath, true);
-
-                            using (SqlCommand cmd = new SqlCommand(updateData + " WHERE registration_number = @RegistrationNumber", sql.GetConnection()))
-                            {
-                                cmd.Parameters.AddWithValue("@Make", addCar_make.Text.Trim());
-                                cmd.Parameters.AddWithValue("@Model", addCar_model.Text.Trim());
-                                cmd.Parameters.AddWithValue("@Year", int.Parse(addCar_year.Text.Trim()));
-                                cmd.Parameters.AddWithValue("@Price", decimal.Parse(addCar_Price.Text.Trim()));
-                                cmd.Parameters.AddWithValue("@Mileage", int.Parse(addCar_Milage.Text.Trim()));
-                                cmd.Parameters.AddWithValue("@Transmission", addCar_transmission.Text.Trim());
-                                cmd.Parameters.AddWithValue("@EngineCapacity", addCar_engine.Text.Trim());
-                                cmd.Parameters.AddWithValue("@ImageUrl", imagePath);
-                                cmd.Parameters.AddWithValue("@RegistrationNumber", addCar_regNo.Text.Trim());
-
-                                cmd.ExecuteNonQuery();
-                            }
                         }
-                        else
+
+                        updateData += " WHERE registration_number = @RegistrationNumber";
+
+                        using (SqlCommand cmd = new SqlCommand(updateData, sql.GetConnection()))
                         {
-                            // Execute without image update if no new image was selected
-                            using (SqlCommand cmd = new SqlCommand(updateData + " WHERE registration_number = @RegistrationNumber", sql.GetConnection()))
+                            cmd.Parameters.AddWithValue("@Make", addCar_make.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Model", addCar_model.Text.Trim());
+                            cmd.Parameters.AddWithValue("@Year", int.Parse(addCar_year.Text.Trim()));
+                            cmd.Parameters.AddWithValue("@Price", decimal.Parse(addCar_Price.Text.Trim()));
+                            cmd.Parameters.AddWithValue("@Mileage", int.Parse(addCar_Milage.Text.Trim()));
+                            cmd.Parameters.AddWithValue("@Transmission", addCar_transmission.Text.Trim());
+                            cmd.Parameters.AddWithValue("@EngineCapacity", addCar_engine.Text.Trim());
+                            cmd.Parameters.AddWithValue("@RegistrationNumber", addCar_regNo.Text.Trim());
+
+                            if (!string.IsNullOrEmpty(imagePath))
                             {
-                                cmd.Parameters.AddWithValue("@Make", addCar_make.Text.Trim());
-                                cmd.Parameters.AddWithValue("@Model", addCar_model.Text.Trim());
-                                cmd.Parameters.AddWithValue("@Year", int.Parse(addCar_year.Text.Trim()));
-                                cmd.Parameters.AddWithValue("@Price", decimal.Parse(addCar_Price.Text.Trim()));
-                                cmd.Parameters.AddWithValue("@Mileage", int.Parse(addCar_Milage.Text.Trim()));
-                                cmd.Parameters.AddWithValue("@Transmission", addCar_transmission.Text.Trim());
-                                cmd.Parameters.AddWithValue("@EngineCapacity", addCar_engine.Text.Trim());
-                                cmd.Parameters.AddWithValue("@RegistrationNumber", addCar_regNo.Text.Trim());
-
-                                cmd.ExecuteNonQuery();
+                                cmd.Parameters.AddWithValue("@ImageUrl", imagePath);
                             }
+
+                            cmd.ExecuteNonQuery();
+
+                            DisplayCarData();
+
+                            MessageBox.Show("Car updated successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            ClearFields();
                         }
-
-                        DisplayCarData();
-
-                        MessageBox.Show("Car updated successfully!", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        ClearFields();
                     }
                     catch (Exception ex)
                     {
@@ -210,6 +190,7 @@ namespace ABC_Car_Traders.AdminPanels
                 }
             }
         }
+
 
 
         private void addCar_deleteBtn_Click(object sender, EventArgs e)
@@ -317,6 +298,37 @@ namespace ABC_Car_Traders.AdminPanels
             addCar_regNo.Text = "";
             addCar_picture.Image = null;
         }
+
+        private string SaveImage(PictureBox pictureBox, string registrationNumber)
+        {
+            // Check if an image is selected
+            if (pictureBox.ImageLocation == null)
+            {
+                return null;
+            }
+
+            // Generate a random file name using GUID
+            string randomFileName = Guid.NewGuid().ToString() + Path.GetExtension(pictureBox.ImageLocation);
+
+            // Define the target directory
+            string targetDirectory = @"C:\Users\kavee\OneDrive\Desktop\CodeMaster\C# - Esoft\ABC Car Traders\Uploads\";
+
+            // Ensure the directory exists
+            if (!Directory.Exists(targetDirectory))
+            {
+                Directory.CreateDirectory(targetDirectory);
+            }
+
+            // Define the full path for the new image
+            string imagePath = Path.Combine(targetDirectory, randomFileName);
+
+            // Copy the file to the target directory
+            File.Copy(pictureBox.ImageLocation, imagePath, true);
+
+            // Return the path of the saved image
+            return imagePath;
+        }
+
 
         private void addCar_picture_Click(object sender, EventArgs e)
         {

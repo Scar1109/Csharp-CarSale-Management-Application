@@ -11,6 +11,7 @@ namespace ABC_Car_Traders
         public Form1()
         {
             InitializeComponent();
+            this.FormClosing += Custom_FormClosing; // Attach the event handler
         }
 
         private void signup_loginBtn_Click(object sender, EventArgs e)
@@ -91,8 +92,8 @@ namespace ABC_Car_Traders
                             // Redirect based on user type
                             if (CurrentUser.UserType == "Admin")
                             {
-                                //AdminDashboard adminDashboard = new AdminDashboard();
-                                //adminDashboard.Show();
+                                AdminDashboard adminDashboard = new AdminDashboard();
+                                adminDashboard.Show();
                             }
                             else if (CurrentUser.UserType == "Customer")
                             {
@@ -118,6 +119,11 @@ namespace ABC_Car_Traders
                 // Ensure the connection is closed
                 sql.CloseConnection();
             }
+        }
+        private void Custom_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Close the entire application if the RegisterForm is closed
+            Application.Exit();
         }
     }
 }

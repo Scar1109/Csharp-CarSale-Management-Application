@@ -12,7 +12,7 @@ namespace ABC_Car_Traders
         public RegisterForm()
         {
             InitializeComponent();
-            this.FormClosing += RegisterForm_FormClosing; // Attach the event handler
+            this.FormClosing += Custom_FormClosing; // Attach the event handler
         }
 
         private void signup_btn_Click(object sender, EventArgs e)
@@ -150,7 +150,7 @@ namespace ABC_Car_Traders
             signup_showPass.Checked = false;
         }
 
-        private void RegisterForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void Custom_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Close the entire application if the RegisterForm is closed
             Application.Exit();

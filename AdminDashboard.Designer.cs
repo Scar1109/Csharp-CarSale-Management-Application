@@ -40,6 +40,7 @@
             this.logout_btn = new System.Windows.Forms.Button();
             this.partDetails_btn = new System.Windows.Forms.Button();
             this.orderDetails_btn = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.logoutBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -218,14 +219,22 @@
             this.orderDetails_btn.Text = "ORDERS";
             this.orderDetails_btn.UseVisualStyleBackColor = false;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(225, 35);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(790, 503);
+            this.panel3.TabIndex = 3;
+            // 
             // logoutBtn
             // 
             this.logoutBtn.BackgroundImage = global::ABC_Car_Traders.Properties.Resources.logout_icon_30x30;
             this.logoutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logoutBtn.FlatAppearance.BorderSize = 0;
             this.logoutBtn.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
-            this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(8)))), ((int)(((byte)(138)))));
+            this.logoutBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.logoutBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
             this.logoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logoutBtn.ForeColor = System.Drawing.Color.White;
             this.logoutBtn.Location = new System.Drawing.Point(15, 456);
@@ -233,6 +242,7 @@
             this.logoutBtn.Size = new System.Drawing.Size(30, 30);
             this.logoutBtn.TabIndex = 7;
             this.logoutBtn.UseVisualStyleBackColor = true;
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // pictureBox1
             // 
@@ -249,9 +259,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 538);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "AdminDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -278,5 +290,6 @@
         private System.Windows.Forms.Button partDetails_btn;
         private System.Windows.Forms.Button logoutBtn;
         private System.Windows.Forms.Button orderDetails_btn;
+        private System.Windows.Forms.Panel panel3;
     }
 }

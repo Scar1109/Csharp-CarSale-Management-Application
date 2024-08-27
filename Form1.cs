@@ -39,7 +39,7 @@ namespace ABC_Car_Traders
         private void signin_showPass_CheckedChanged(object sender, EventArgs e)
         {
             // Toggle password visibility
-            signin_password.UseSystemPasswordChar = !signin_showPass.Checked;
+            signin_password.UseSystemPasswordChar = signin_showPass.Checked;
         }
 
         private void signin_btn_Click(object sender, EventArgs e)
@@ -87,8 +87,6 @@ namespace ABC_Car_Traders
                             CurrentUser.UserType = reader.GetString(3);
                             CurrentUser.DateRegister = reader.GetDateTime(4);
 
-                            MessageBox.Show("Login successful as " + CurrentUser.UserType);
-
                             // Redirect based on user type
                             if (CurrentUser.UserType == "Admin")
                             {
@@ -97,8 +95,8 @@ namespace ABC_Car_Traders
                             }
                             else if (CurrentUser.UserType == "Customer")
                             {
-                                //Home home = new Home();
-                                //home.Show();
+                                Home home = new Home();
+                                home.Show();
                             }
 
                             this.Hide(); // Hide the login form

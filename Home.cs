@@ -71,5 +71,25 @@ namespace ABC_Car_Traders
             }
         }
 
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            DialogResult check = MessageBox.Show("Are you sure you want to sign out?"
+                , "Confirmation Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (check == DialogResult.Yes)
+            {
+                Form1 form1 = new Form1();
+                form1.Show();
+
+                // Remove Current user data
+                CurrentUser.Id = 0;
+                CurrentUser.Username = " ";
+                CurrentUser.Email = " ";
+                CurrentUser.UserType = " ";
+                CurrentUser.DateRegister = DateTime.Now;
+
+                this.Hide();
+            }
+        }
     }
 }

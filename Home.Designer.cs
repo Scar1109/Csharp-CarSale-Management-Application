@@ -36,6 +36,7 @@
             this.dashboard_btn = new System.Windows.Forms.Button();
             this.profile_text = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.logout_btn = new System.Windows.Forms.Label();
             this.carView1 = new ABC_Car_Traders.HomePanels.CarView();
             this.partsView1 = new ABC_Car_Traders.HomePanels.PartsView();
             this.ordersView1 = new ABC_Car_Traders.HomePanels.OrdersView();
@@ -150,6 +151,18 @@
             this.panel3.Size = new System.Drawing.Size(952, 610);
             this.panel3.TabIndex = 4;
             // 
+            // logout_btn
+            // 
+            this.logout_btn.AutoSize = true;
+            this.logout_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.Location = new System.Drawing.Point(909, 61);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(44, 16);
+            this.logout_btn.TabIndex = 5;
+            this.logout_btn.Text = "logout";
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            // 
             // carView1
             // 
             this.carView1.BackColor = System.Drawing.Color.White;
@@ -161,6 +174,8 @@
             // 
             // partsView1
             // 
+            this.partsView1.BackColor = System.Drawing.Color.White;
+            this.partsView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.partsView1.Location = new System.Drawing.Point(0, 0);
             this.partsView1.Name = "partsView1";
             this.partsView1.Size = new System.Drawing.Size(952, 608);
@@ -178,6 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(975, 794);
+            this.Controls.Add(this.logout_btn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.profile_text);
             this.Controls.Add(this.panel2);
@@ -207,5 +223,6 @@
         private HomePanels.CarView carView1;
         private HomePanels.PartsView partsView1;
         private HomePanels.OrdersView ordersView1;
+        private System.Windows.Forms.Label logout_btn;
     }
 }

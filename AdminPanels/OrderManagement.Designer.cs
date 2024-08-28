@@ -78,7 +78,7 @@
             this.carOrdersDataGrid.RowHeadersVisible = false;
             this.carOrdersDataGrid.Size = new System.Drawing.Size(379, 315);
             this.carOrdersDataGrid.TabIndex = 4;
-            this.carOrdersDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ordersDataGridView_CellClick);
+            this.carOrdersDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carOrdersDataGrid_CellClick);
             // 
             // label1
             // 
@@ -121,6 +121,7 @@
             this.partOrdersDataGrid.RowHeadersVisible = false;
             this.partOrdersDataGrid.Size = new System.Drawing.Size(379, 315);
             this.partOrdersDataGrid.TabIndex = 4;
+            this.partOrdersDataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.partOrdersDataGrid_CellClick);
             // 
             // label2
             // 

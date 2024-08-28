@@ -10,11 +10,13 @@ namespace ABC_Car_Traders.AdminPanels
     {
         private int selectedOrderId;
         private string selectedOrderStatus;
+        private string selectedOrderType; // To differentiate between car orders and part orders
 
         public OrderManagement()
         {
             InitializeComponent();
             LoadCarOrders(); // Load car orders when the UserControl is initialized
+            LoadPartOrders(); // Load part orders when the UserControl is initialized
         }
 
         private void LoadCarOrders()
@@ -34,13 +36,57 @@ namespace ABC_Car_Traders.AdminPanels
             carOrdersDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        private void ordersDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void LoadPartOrders()
+        {
+            PartOrderData partOrderData = new PartOrderData();
+            List<PartOrderData> partOrders = partOrderData.GetAllPartOrders();
+
+
+
+            partOrdersDataGrid.DataSource = partOrders;
+
+            partOrdersDataGrid.Columns["ImageUrl"].Visible = false;
+            partOrdersDataGrid.Columns["Manufacturer"].Visible = false;
+            partOrdersDataGrid.Columns["OrderDate"].Visible = false;
+
+
+
+            // Set DataGridView properties
+            partOrdersDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            partOrdersDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void carOrdersDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = carOrdersDataGrid.Rows[e.RowIndex];
                 selectedOrderId = Convert.ToInt32(row.Cells["OrderID"].Value);
                 selectedOrderStatus = row.Cells["Status"].Value.ToString();
+                selectedOrderType = "Car"; // Mark that the selected order is a car order
+
+                order_id.Text = selectedOrderId.ToString();
+                order_status.Text = selectedOrderStatus;
+
+                if (selectedOrderStatus == "Completed")
+                {
+                    conformDilivary_btn.Enabled = false;
+                }
+                else
+                {
+                    conformDilivary_btn.Enabled = true;
+                }
+            }
+        }
+
+        private void partOrdersDataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = partOrdersDataGrid.Rows[e.RowIndex];
+                selectedOrderId = Convert.ToInt32(row.Cells["OrderID"].Value);
+                selectedOrderStatus = row.Cells["Status"].Value.ToString();
+                selectedOrderType = "Part"; // Mark that the selected order is a part order
 
                 order_id.Text = selectedOrderId.ToString();
                 order_status.Text = selectedOrderStatus;
@@ -60,11 +106,20 @@ namespace ABC_Car_Traders.AdminPanels
         {
             if (selectedOrderId > 0)
             {
-                CarOrderData carOrderData = new CarOrderData();
-                carOrderData.UpdateOrderStatus(selectedOrderId, "Completed");
-
-                MessageBox.Show("Order status updated to Completed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadCarOrders(); // Refresh the order list
+                if (selectedOrderType == "Car")
+                {
+                    CarOrderData carOrderData = new CarOrderData();
+                    carOrderData.UpdateOrderStatus(selectedOrderId, "Completed");
+                    MessageBox.Show("Car order status updated to Completed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadCarOrders(); // Refresh the car order list
+                }
+                else if (selectedOrderType == "Part")
+                {
+                    PartOrderData partOrderData = new PartOrderData();
+                    partOrderData.UpdateOrderStatus(selectedOrderId, "Completed");
+                    MessageBox.Show("Part order status updated to Completed.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadPartOrders(); // Refresh the part order list
+                }
 
                 order_id.Text = "--select--";
                 order_status.Text = "--select--";

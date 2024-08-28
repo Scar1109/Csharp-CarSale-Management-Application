@@ -147,7 +147,7 @@ namespace ABC_Car_Traders.HomePanels
         // Placeholder method for the "Order Now" button
         private void OrderCar(CarData car)
         {
-            // You can implement the actual ordering logic here
+            
             OrderForm orderForm = new OrderForm(car);
 
             orderForm.ShowDialog();

@@ -132,8 +132,8 @@ namespace ABC_Car_Traders.HomePanels
         // Placeholder method for the "Order Now" button
         private void OrderPart(PartData part)
         {
-            // You can implement the actual ordering logic here
-            MessageBox.Show($"Order placed for {part.PartName}!", "Order Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PartOrderForm orderForm = new PartOrderForm(part);
+            orderForm.ShowDialog(); // Show the order form as a dialog
         }
     }
 }

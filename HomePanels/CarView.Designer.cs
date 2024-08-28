@@ -35,14 +35,14 @@
             // 
             // searchInput
             // 
-            this.searchInput.Location = new System.Drawing.Point(699, 8);
+            this.searchInput.Location = new System.Drawing.Point(699, 15);
             this.searchInput.Name = "searchInput";
             this.searchInput.Size = new System.Drawing.Size(153, 20);
             this.searchInput.TabIndex = 7;
             // 
             // searchBtn
             // 
-            this.searchBtn.Location = new System.Drawing.Point(858, 7);
+            this.searchBtn.Location = new System.Drawing.Point(858, 14);
             this.searchBtn.Name = "searchBtn";
             this.searchBtn.Size = new System.Drawing.Size(75, 23);
             this.searchBtn.TabIndex = 6;
@@ -53,9 +53,9 @@
             // carViewPanel
             // 
             this.carViewPanel.AutoScroll = true;
-            this.carViewPanel.Location = new System.Drawing.Point(3, 36);
+            this.carViewPanel.Location = new System.Drawing.Point(1, 46);
             this.carViewPanel.Name = "carViewPanel";
-            this.carViewPanel.Size = new System.Drawing.Size(949, 569);
+            this.carViewPanel.Size = new System.Drawing.Size(949, 557);
             this.carViewPanel.TabIndex = 8;
             // 
             // CarView

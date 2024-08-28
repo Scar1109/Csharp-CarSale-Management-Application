@@ -224,7 +224,7 @@
             this.Controls.Add(this.part_Image);
             this.Name = "PartOrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PartOrderForm";
+            this.Text = "Order Now";
             ((System.ComponentModel.ISupportInitialize)(this.part_Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

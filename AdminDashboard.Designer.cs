@@ -41,11 +41,11 @@
             this.logout_btn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.userManagement1 = new ABC_Car_Traders.AdminPanels.UserManagement();
-            this.orderManagement1 = new ABC_Car_Traders.AdminPanels.OrderManagement();
-            this.partManagement1 = new ABC_Car_Traders.AdminPanels.PartManagement();
-            this.carManagement1 = new ABC_Car_Traders.AdminPanels.CarManagement();
             this.dashboard1 = new ABC_Car_Traders.Dashboard();
+            this.carManagement1 = new ABC_Car_Traders.AdminPanels.CarManagement();
+            this.partManagement1 = new ABC_Car_Traders.AdminPanels.PartManagement();
+            this.orderManagement1 = new ABC_Car_Traders.AdminPanels.OrderManagement();
+            this.userManagement1 = new ABC_Car_Traders.AdminPanels.UserManagement();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -243,26 +243,12 @@
             this.panel3.Size = new System.Drawing.Size(907, 560);
             this.panel3.TabIndex = 3;
             // 
-            // userManagement1
+            // dashboard1
             // 
-            this.userManagement1.Location = new System.Drawing.Point(0, 0);
-            this.userManagement1.Name = "userManagement1";
-            this.userManagement1.Size = new System.Drawing.Size(907, 560);
-            this.userManagement1.TabIndex = 0;
-            // 
-            // orderManagement1
-            // 
-            this.orderManagement1.Location = new System.Drawing.Point(0, 0);
-            this.orderManagement1.Name = "orderManagement1";
-            this.orderManagement1.Size = new System.Drawing.Size(907, 560);
-            this.orderManagement1.TabIndex = 1;
-            // 
-            // partManagement1
-            // 
-            this.partManagement1.Location = new System.Drawing.Point(0, 0);
-            this.partManagement1.Name = "partManagement1";
-            this.partManagement1.Size = new System.Drawing.Size(907, 560);
-            this.partManagement1.TabIndex = 2;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(907, 560);
+            this.dashboard1.TabIndex = 4;
             // 
             // carManagement1
             // 
@@ -271,12 +257,26 @@
             this.carManagement1.Size = new System.Drawing.Size(907, 560);
             this.carManagement1.TabIndex = 3;
             // 
-            // dashboard1
+            // partManagement1
             // 
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(907, 560);
-            this.dashboard1.TabIndex = 4;
+            this.partManagement1.Location = new System.Drawing.Point(0, 0);
+            this.partManagement1.Name = "partManagement1";
+            this.partManagement1.Size = new System.Drawing.Size(907, 560);
+            this.partManagement1.TabIndex = 2;
+            // 
+            // orderManagement1
+            // 
+            this.orderManagement1.Location = new System.Drawing.Point(0, 0);
+            this.orderManagement1.Name = "orderManagement1";
+            this.orderManagement1.Size = new System.Drawing.Size(907, 560);
+            this.orderManagement1.TabIndex = 1;
+            // 
+            // userManagement1
+            // 
+            this.userManagement1.Location = new System.Drawing.Point(0, 0);
+            this.userManagement1.Name = "userManagement1";
+            this.userManagement1.Size = new System.Drawing.Size(907, 560);
+            this.userManagement1.TabIndex = 0;
             // 
             // AdminDashboard
             // 
@@ -288,7 +288,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AdminDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AdminDashboard";
+            this.Text = "Admin Dashboard";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

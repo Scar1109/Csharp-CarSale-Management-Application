@@ -272,7 +272,7 @@
             this.Controls.Add(this.car_Image);
             this.Name = "OrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "OrderForm";
+            this.Text = "Order Now";
             ((System.ComponentModel.ISupportInitialize)(this.car_Image)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

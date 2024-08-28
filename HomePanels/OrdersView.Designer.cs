@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panal01 = new System.Windows.Forms.Panel();
-            this.partOrders_Panel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.carOrders_Panel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.partOrders_Panel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.partOrder_panal = new System.Windows.Forms.Panel();
             this.panal01.SuspendLayout();
             this.partOrders_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -48,15 +49,13 @@
             this.panal01.Size = new System.Drawing.Size(924, 288);
             this.panal01.TabIndex = 0;
             // 
-            // partOrders_Panel
+            // carOrders_Panel
             // 
-            this.partOrders_Panel.BackColor = System.Drawing.Color.White;
-            this.partOrders_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.partOrders_Panel.Controls.Add(this.label2);
-            this.partOrders_Panel.Location = new System.Drawing.Point(14, 309);
-            this.partOrders_Panel.Name = "partOrders_Panel";
-            this.partOrders_Panel.Size = new System.Drawing.Size(924, 288);
-            this.partOrders_Panel.TabIndex = 1;
+            this.carOrders_Panel.AutoScroll = true;
+            this.carOrders_Panel.Location = new System.Drawing.Point(19, 35);
+            this.carOrders_Panel.Name = "carOrders_Panel";
+            this.carOrders_Panel.Size = new System.Drawing.Size(887, 232);
+            this.carOrders_Panel.TabIndex = 2;
             // 
             // label1
             // 
@@ -68,6 +67,17 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Car Orders";
             // 
+            // partOrders_Panel
+            // 
+            this.partOrders_Panel.BackColor = System.Drawing.Color.White;
+            this.partOrders_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.partOrders_Panel.Controls.Add(this.partOrder_panal);
+            this.partOrders_Panel.Controls.Add(this.label2);
+            this.partOrders_Panel.Location = new System.Drawing.Point(14, 309);
+            this.partOrders_Panel.Name = "partOrders_Panel";
+            this.partOrders_Panel.Size = new System.Drawing.Size(924, 288);
+            this.partOrders_Panel.TabIndex = 1;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -78,13 +88,13 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Part Orders";
             // 
-            // carOrders_Panel
+            // partOrder_panal
             // 
-            this.carOrders_Panel.AutoScroll = true;
-            this.carOrders_Panel.Location = new System.Drawing.Point(19, 35);
-            this.carOrders_Panel.Name = "carOrders_Panel";
-            this.carOrders_Panel.Size = new System.Drawing.Size(887, 232);
-            this.carOrders_Panel.TabIndex = 2;
+            this.partOrder_panal.AutoScroll = true;
+            this.partOrder_panal.Location = new System.Drawing.Point(19, 37);
+            this.partOrder_panal.Name = "partOrder_panal";
+            this.partOrder_panal.Size = new System.Drawing.Size(887, 232);
+            this.partOrder_panal.TabIndex = 3;
             // 
             // OrdersView
             // 
@@ -109,5 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel partOrders_Panel;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel partOrder_panal;
     }
 }

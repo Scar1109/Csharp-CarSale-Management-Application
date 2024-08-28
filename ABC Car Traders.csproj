@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="Data\CarData.cs" />
     <Compile Include="Data\CarOrderData.cs" />
+    <Compile Include="Data\PartData.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

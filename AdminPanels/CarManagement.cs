@@ -36,6 +36,8 @@ namespace ABC_Car_Traders.AdminPanels
             List<CarData> carList = carData.CarListData();
 
             carDataGridView.DataSource = carList;
+
+            carDataGridView.Columns["ImageUrl"].Visible = false;
         }
 
         private void addCar_addBtn_Click(object sender, EventArgs e)

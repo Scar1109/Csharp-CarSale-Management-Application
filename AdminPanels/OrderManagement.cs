@@ -48,15 +48,11 @@ namespace ABC_Car_Traders.AdminPanels
             PartOrderData partOrderData = new PartOrderData();
             List<PartOrderData> partOrders = partOrderData.GetAllPartOrders();
 
-
-
             partOrdersDataGrid.DataSource = partOrders;
 
             partOrdersDataGrid.Columns["ImageUrl"].Visible = false;
             partOrdersDataGrid.Columns["Manufacturer"].Visible = false;
             partOrdersDataGrid.Columns["OrderDate"].Visible = false;
-
-
 
             // Set DataGridView properties
             partOrdersDataGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

@@ -33,6 +33,28 @@ namespace ABC_Car_Traders
             }
         }
 
+        public int ExecuteScalarQuery(string query)
+        {
+            int count = 0;
+            try
+            {
+                OpenConnection();
+                using (SqlCommand cmd = new SqlCommand(query, _connection))
+                {
+                    count = Convert.ToInt32(cmd.ExecuteScalar());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error executing scalar query: " + ex.Message);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+            return count;
+        }
+
         public void Dispose()
         {
             CloseConnection();

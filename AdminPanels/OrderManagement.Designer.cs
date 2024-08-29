@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.carOrder_export = new System.Windows.Forms.Button();
             this.carOrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.partOrder_export = new System.Windows.Forms.Button();
             this.partOrdersDataGrid = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,12 +43,12 @@
             this.order_id = new System.Windows.Forms.Label();
             this.order_status = new System.Windows.Forms.Label();
             this.conformDilivary_btn = new System.Windows.Forms.Button();
-            this.carOrder_export = new System.Windows.Forms.Button();
-            this.partOrder_export = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.carOrdersDataGrid)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partOrdersDataGrid)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -61,18 +63,32 @@
             this.panel2.Size = new System.Drawing.Size(422, 406);
             this.panel2.TabIndex = 2;
             // 
+            // carOrder_export
+            // 
+            this.carOrder_export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.carOrder_export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.carOrder_export.ForeColor = System.Drawing.Color.White;
+            this.carOrder_export.Location = new System.Drawing.Point(324, 25);
+            this.carOrder_export.Name = "carOrder_export";
+            this.carOrder_export.Size = new System.Drawing.Size(75, 23);
+            this.carOrder_export.TabIndex = 5;
+            this.carOrder_export.Text = "Export";
+            this.carOrder_export.UseVisualStyleBackColor = false;
+            this.carOrder_export.Click += new System.EventHandler(this.carOrder_export_Click);
+            // 
             // carOrdersDataGrid
             // 
             this.carOrdersDataGrid.AllowUserToAddRows = false;
             this.carOrdersDataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.carOrdersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.carOrdersDataGrid.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.carOrdersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.carOrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.carOrdersDataGrid.EnableHeadersVisualStyles = false;
             this.carOrdersDataGrid.Location = new System.Drawing.Point(20, 64);
@@ -100,23 +116,37 @@
             this.panel1.Controls.Add(this.partOrder_export);
             this.panel1.Controls.Add(this.partOrdersDataGrid);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(461, 13);
+            this.panel1.Location = new System.Drawing.Point(462, 13);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(422, 406);
             this.panel1.TabIndex = 5;
+            // 
+            // partOrder_export
+            // 
+            this.partOrder_export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
+            this.partOrder_export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.partOrder_export.ForeColor = System.Drawing.Color.White;
+            this.partOrder_export.Location = new System.Drawing.Point(324, 25);
+            this.partOrder_export.Name = "partOrder_export";
+            this.partOrder_export.Size = new System.Drawing.Size(75, 23);
+            this.partOrder_export.TabIndex = 6;
+            this.partOrder_export.Text = "Export";
+            this.partOrder_export.UseVisualStyleBackColor = false;
+            this.partOrder_export.Click += new System.EventHandler(this.partOrder_export_Click);
             // 
             // partOrdersDataGrid
             // 
             this.partOrdersDataGrid.AllowUserToAddRows = false;
             this.partOrdersDataGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.partOrdersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.partOrdersDataGrid.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(11)))), ((int)(((byte)(97)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.partOrdersDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.partOrdersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.partOrdersDataGrid.EnableHeadersVisualStyles = false;
             this.partOrdersDataGrid.Location = new System.Drawing.Point(20, 64);
@@ -141,7 +171,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(245, 455);
+            this.label3.Location = new System.Drawing.Point(220, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 19);
             this.label3.TabIndex = 6;
@@ -151,7 +181,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(245, 495);
+            this.label4.Location = new System.Drawing.Point(220, 61);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 19);
             this.label4.TabIndex = 7;
@@ -161,7 +191,7 @@
             // 
             this.order_id.AutoSize = true;
             this.order_id.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.order_id.Location = new System.Drawing.Point(360, 455);
+            this.order_id.Location = new System.Drawing.Point(335, 21);
             this.order_id.Name = "order_id";
             this.order_id.Size = new System.Drawing.Size(72, 19);
             this.order_id.TabIndex = 8;
@@ -171,7 +201,7 @@
             // 
             this.order_status.AutoSize = true;
             this.order_status.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.order_status.Location = new System.Drawing.Point(360, 495);
+            this.order_status.Location = new System.Drawing.Point(335, 61);
             this.order_status.Name = "order_status";
             this.order_status.Size = new System.Drawing.Size(72, 19);
             this.order_status.TabIndex = 9;
@@ -186,7 +216,7 @@
             this.conformDilivary_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.conformDilivary_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.conformDilivary_btn.ForeColor = System.Drawing.Color.White;
-            this.conformDilivary_btn.Location = new System.Drawing.Point(599, 463);
+            this.conformDilivary_btn.Location = new System.Drawing.Point(547, 27);
             this.conformDilivary_btn.Name = "conformDilivary_btn";
             this.conformDilivary_btn.Size = new System.Drawing.Size(214, 47);
             this.conformDilivary_btn.TabIndex = 16;
@@ -194,41 +224,25 @@
             this.conformDilivary_btn.UseVisualStyleBackColor = false;
             this.conformDilivary_btn.Click += new System.EventHandler(this.conformDilivary_btn_Click);
             // 
-            // carOrder_export
+            // panel3
             // 
-            this.carOrder_export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.carOrder_export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.carOrder_export.ForeColor = System.Drawing.Color.White;
-            this.carOrder_export.Location = new System.Drawing.Point(324, 25);
-            this.carOrder_export.Name = "carOrder_export";
-            this.carOrder_export.Size = new System.Drawing.Size(75, 23);
-            this.carOrder_export.TabIndex = 5;
-            this.carOrder_export.Text = "Export";
-            this.carOrder_export.UseVisualStyleBackColor = false;
-            this.carOrder_export.Click += new System.EventHandler(this.carOrder_export_Click);
-            // 
-            // partOrder_export
-            // 
-            this.partOrder_export.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(63)))), ((int)(((byte)(142)))));
-            this.partOrder_export.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.partOrder_export.ForeColor = System.Drawing.Color.White;
-            this.partOrder_export.Location = new System.Drawing.Point(324, 25);
-            this.partOrder_export.Name = "partOrder_export";
-            this.partOrder_export.Size = new System.Drawing.Size(75, 23);
-            this.partOrder_export.TabIndex = 6;
-            this.partOrder_export.Text = "Export";
-            this.partOrder_export.UseVisualStyleBackColor = false;
-            this.partOrder_export.Click += new System.EventHandler(this.partOrder_export_Click);
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.conformDilivary_btn);
+            this.panel3.Controls.Add(this.order_status);
+            this.panel3.Controls.Add(this.order_id);
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(21, 436);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(863, 103);
+            this.panel3.TabIndex = 17;
             // 
             // OrderManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.conformDilivary_btn);
-            this.Controls.Add(this.order_status);
-            this.Controls.Add(this.order_id);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "OrderManagement";
@@ -239,8 +253,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.partOrdersDataGrid)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -259,5 +274,6 @@
         private System.Windows.Forms.Button conformDilivary_btn;
         private System.Windows.Forms.Button carOrder_export;
         private System.Windows.Forms.Button partOrder_export;
+        private System.Windows.Forms.Panel panel3;
     }
 }

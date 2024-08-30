@@ -124,7 +124,7 @@ namespace ABC_Car_Traders
         private void signup_showPass_CheckedChanged(object sender, EventArgs e)
         {
             // Toggle password visibility
-            signup_password.UseSystemPasswordChar = !signup_showPass.Checked;
+            signup_password.UseSystemPasswordChar = signup_showPass.Checked;
         }
 
         // Helper method to validate email using regex

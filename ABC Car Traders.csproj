@@ -93,6 +93,7 @@
     <Compile Include="Data\CarOrderData.cs" />
     <Compile Include="Data\PartData.cs" />
     <Compile Include="Data\PartOrderData.cs" />
+    <Compile Include="Data\UserData.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

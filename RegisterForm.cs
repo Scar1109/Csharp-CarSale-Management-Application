@@ -77,8 +77,8 @@ namespace ABC_Car_Traders
                         CurrentUser.DateRegister = dateRegister;
 
                         // Redirect based on user type (since it's a new user, default is Customer)
-                        //Home home = new Home();
-                        //home.Show();
+                        Home home = new Home();
+                        home.Show();
                         this.Hide();
                     }
                     else

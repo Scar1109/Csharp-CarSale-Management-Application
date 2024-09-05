@@ -44,6 +44,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.user_type = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -53,6 +55,8 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.user_type);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.emailInput);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.deleteUser_btn);
@@ -96,7 +100,7 @@
             this.deleteUser_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteUser_btn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteUser_btn.ForeColor = System.Drawing.Color.White;
-            this.deleteUser_btn.Location = new System.Drawing.Point(19, 354);
+            this.deleteUser_btn.Location = new System.Drawing.Point(19, 407);
             this.deleteUser_btn.Name = "deleteUser_btn";
             this.deleteUser_btn.Size = new System.Drawing.Size(108, 37);
             this.deleteUser_btn.TabIndex = 19;
@@ -107,7 +111,7 @@
             // showPwd_checkBox
             // 
             this.showPwd_checkBox.AutoSize = true;
-            this.showPwd_checkBox.Location = new System.Drawing.Point(159, 269);
+            this.showPwd_checkBox.Location = new System.Drawing.Point(159, 322);
             this.showPwd_checkBox.Name = "showPwd_checkBox";
             this.showPwd_checkBox.Size = new System.Drawing.Size(99, 17);
             this.showPwd_checkBox.TabIndex = 18;
@@ -133,7 +137,7 @@
             this.input_clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.input_clearBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_clearBtn.ForeColor = System.Drawing.Color.White;
-            this.input_clearBtn.Location = new System.Drawing.Point(150, 354);
+            this.input_clearBtn.Location = new System.Drawing.Point(150, 407);
             this.input_clearBtn.Name = "input_clearBtn";
             this.input_clearBtn.Size = new System.Drawing.Size(108, 37);
             this.input_clearBtn.TabIndex = 16;
@@ -149,7 +153,7 @@
             this.addNew_userBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addNew_userBtn.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNew_userBtn.ForeColor = System.Drawing.Color.White;
-            this.addNew_userBtn.Location = new System.Drawing.Point(19, 298);
+            this.addNew_userBtn.Location = new System.Drawing.Point(19, 351);
             this.addNew_userBtn.Name = "addNew_userBtn";
             this.addNew_userBtn.Size = new System.Drawing.Size(239, 37);
             this.addNew_userBtn.TabIndex = 15;
@@ -160,7 +164,7 @@
             // password_inputBox
             // 
             this.password_inputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_inputBox.Location = new System.Drawing.Point(19, 238);
+            this.password_inputBox.Location = new System.Drawing.Point(19, 291);
             this.password_inputBox.Multiline = true;
             this.password_inputBox.Name = "password_inputBox";
             this.password_inputBox.Size = new System.Drawing.Size(239, 25);
@@ -170,7 +174,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 219);
+            this.label4.Location = new System.Drawing.Point(16, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 16);
             this.label4.TabIndex = 4;
@@ -239,6 +243,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Users";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 219);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 16);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "User Type";
+            // 
+            // user_type
+            // 
+            this.user_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_type.FormattingEnabled = true;
+            this.user_type.Items.AddRange(new object[] {
+            "Customer",
+            "Admin"});
+            this.user_type.Location = new System.Drawing.Point(19, 240);
+            this.user_type.Name = "user_type";
+            this.user_type.Size = new System.Drawing.Size(239, 23);
+            this.user_type.TabIndex = 24;
+            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,5 +299,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox emailInput;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox user_type;
     }
 }

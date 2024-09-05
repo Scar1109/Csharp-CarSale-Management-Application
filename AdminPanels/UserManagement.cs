@@ -55,16 +55,27 @@ namespace ABC_Car_Traders.AdminPanels
         // Event handler to add a new user
         private void addNew_userBtn_Click(object sender, EventArgs e)
         {
+            // Validate input fields
+            if (username_input.Text == ""
+                || emailInput.Text == ""
+                || password_inputBox.Text == ""
+                || user_type.Text == "" )
+            {
+                MessageBox.Show("Please fill all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             UserData newUser = new UserData
             {
                 Username = username_input.Text.Trim(),
                 Email = emailInput.Text.Trim(),
                 Password = password_inputBox.Text.Trim(),
-                UserType = "Customer", // Default user type, can be changed based on requirements
+                UserType = user_type.Text.Trim(),
                 DateRegister = DateTime.Now
             };
 
             UserData userData = new UserData();
+            // Add the new user
             userData.AddUser(newUser);
             MessageBox.Show("User added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LoadUsers(); // Refresh the user list
@@ -91,6 +102,7 @@ namespace ABC_Car_Traders.AdminPanels
                 username_input.Text = selectedUser.Username;
                 emailInput.Text = selectedUser.Email;
                 password_inputBox.Text = selectedUser.Password;
+                user_type.Text = selectedUser.UserType;
             }
             TogglePasswordVisibility();
         }
@@ -102,6 +114,7 @@ namespace ABC_Car_Traders.AdminPanels
             emailInput.Text = "";
             password_inputBox.Text = "";
             selectedUser = null;
+            user_type.Text = "";
         }
 
         private void showPwd_checkBox_CheckedChanged(object sender, EventArgs e)
@@ -117,3 +130,4 @@ namespace ABC_Car_Traders.AdminPanels
         }
     }
 }
+

@@ -384,5 +384,29 @@ namespace ABC_Car_Traders.AdminPanels
 
         }
 
+        private void BtnSortByMileage_Click(object sender, EventArgs e)
+        {
+            // Get the current data source
+            List<CarData> carList = (List<CarData>)carDataGridView.DataSource;
+
+            // Sort the list by Mileage
+            carList = carList.OrderBy(car => car.Mileage).ToList();
+
+            // Update the DataGridView with the sorted list
+            carDataGridView.DataSource = carList;
+        }
+
+        private void BtnSortByYear_Click(object sender, EventArgs e)
+        {
+            // Get the current data source
+            List<CarData> carList = (List<CarData>)carDataGridView.DataSource;
+
+            // Sort the list by Year
+            carList = carList.OrderBy(car => car.Year).ToList();
+
+            // Update the DataGridView with the sorted list
+            carDataGridView.DataSource = carList;
+        }
+
     }
 }

@@ -152,5 +152,30 @@ namespace ABC_Car_Traders.HomePanels
 
             orderForm.ShowDialog();
         }
+
+        private void BtnSortByMileage_Click(object sender, EventArgs e)
+        {
+            // Get the current list of cars
+            List<CarData> carList = new CarData().CarListData();
+
+            // Sort the list by Mileage
+            carList = carList.OrderBy(car => car.Mileage).ToList();
+
+            // Update the display with the sorted list
+            DisplayCars(carList);
+        }
+
+        private void BtnSortByYear_Click(object sender, EventArgs e)
+        {
+            // Get the current list of cars
+            List<CarData> carList = new CarData().CarListData();
+
+            // Sort the list by Year
+            carList = carList.OrderBy(car => car.Year).ToList();
+
+            // Update the display with the sorted list
+            DisplayCars(carList);
+        }
+
     }
 }
